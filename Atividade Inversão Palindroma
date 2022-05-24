@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <strings.h>
+
+void inverter(char vet[]){
+    int i, aux, fim, tam = strlen(vet);
+    fim - tam-1;
+
+    for(i=0; i<tam/2; i++){
+        aux = vet [i]; //COPIANDO O PRIMEIRO ELEMENTO DO VETOR
+        vet[i] = vet[fim] //TROCANDO AS POSIÇÕES
+        vet[fim] = aux; //TROCANDO POSIÇÃO INICIAL E FINAL
+        fim--; //DECREMENTO
+    }
+}
+char* inverter2(chat vet[]) //REVERTENDO A FRASE PARA VERIFICAR SE É PALINDROMA OU NÃO
+int i, aux, fim, tam = strlen(vet); //TAMANHO DA STRING
+char*novo = malloc((tam+1) *sizeof (char)); //ALOCAÇÃO, ALOCAÇÃO DE MEMÓRIA PARA GUARDAR CARACTERES
+
+fim = tam-1; //VOLTANDO OS ELEMENTOS PARA A POSIÇÃO INICIAL
+for(i = 0; i<tam; i++){ //I COMEÇA EM 0, SENDO MENOR QUE TAM, INCREMENTO
+    novo[fim] - vet[i]; //VOLTANDO A POSIÇÃO DA STRING
+    fim--; //DECREMENTO 
+}
+novo[i] = '\0'; //UTILIZADO APRA FINALIZAR A STRING
+return novo; //RETORNANDO O PONTEIRO
+}
+
+int main(){
+    char palavra(999999);
+    printf("Digite uma palavra ou frase para ser INVERTIDA/REVERTIDA"); //PEDINDO FRASE PARA VERIFICAÇÃO
+    scanf("[^\n]",palavra); //LENDO O QUE O USUÁRIO DIGITOU
+    printf("\n"); //PULANDO LINHA
+    printf("Frase digitada; \n") //PEDINDO PARA DIGITAR A FRASE
+    fgets(palavra, 999999, stdin); //LENDO A STRING COMPLETA SEM ESPAÇO EM BRANCO
+}
+char *p; //INVERTENDO A PALAVRA 
+printf("%s\n",palavra); //FRASE DIGITADA PELO USUÁRIO
+inverter(palavra); //CHAMANDO INVERTER
+printf("Frase invertida: ") //MOSTRANDO FRASE
+printf("%s\n", palavra) //MOSTRNDO O QUE O USUÁRIO DIGITOU DE FORMA INVERTIDA
+printf("\n"); //PULA LINHA
+
+p = inverter2(palavra); //REVERTENDO A STRING DIGITADA PELO USUÁRIO
+printf("Revertendo String: \n") //REVERTENDO 
+printf("%s\n",p); - //PUXANDO O PONTEIRO INVERTER2 (PARA REVERTER)
+
+return 0;
